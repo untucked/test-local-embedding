@@ -78,8 +78,7 @@ def run_embedding(model_cfg, embed_model, documents, use_index=True):
         index = VectorStoreIndex.from_documents(documents)
         nodes = list(index.storage_context.docstore.docs.values())     
     else:
-        parser = TokenTextSplitter(chunk_size=max_tokens, chunk_overlap=int(0.1 * max_tokens))
-        nodes = parser.get_nodes_from_documents(documents)
+        nodes = get_nodes(documents, chunk_size=max_tokens)
     texts = [node.get_content(metadata_mode="EMBED") for node in nodes]
     embed_start = time.time()
     embeddings = embed_model.get_text_embedding_batch(texts)
