@@ -7,7 +7,7 @@
     },
     {
         "name": "MiniLM-L12",
-        "path": "sentence-transformers/paraphrase-MiniLM-L12-v2",
+        "path": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
         "type": "sentence_transformer",
         "max_tokens": 512
     },

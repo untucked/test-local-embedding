@@ -4,7 +4,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 plt.style.use('ggplot')
-def plot_results(csv_file="embedding_results.csv", output_file="embedding_plot.png"):
+def plot_results(filename='embedding_results'):
+    csv_file="%s.csv"%(filename)
+    output_file="%s.png"%(filename)
     df = pd.read_csv(csv_file)
     df = df[df["silhouette"] != "N/A"]
     df["silhouette"] = df["silhouette"].astype(float)
@@ -30,4 +32,6 @@ def plot_results(csv_file="embedding_results.csv", output_file="embedding_plot.p
     print(f"\n✅ Plot saved as {output_file}")
 
 if __name__ == "__main__":
-    plot_results()
+    filename = "embedding_results"
+    filename = "embedding_results_metadata"
+    plot_results(filename=filename)

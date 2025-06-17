@@ -1,0 +1,7 @@
+model,load_time_sec,embed_time_sec,avg_cos_sim,silhouette
+MiniLM,1.59,0.92,0.4981,0.1784
+MiniLM-L12,1.57,0.91,0.6918,0.3008
+MPNet,0.19,8.83,0.5846,0.1906
+MiniLM-QA,0.24,1.73,0.5149,0.2165
+T5-Base,0.59,5.58,0.911,0.2082
+BGE-Small,0.37,3.38,0.7271,0.1942
