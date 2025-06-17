@@ -1,0 +1,46 @@
+[
+    {
+        "name": "MiniLM",
+        "path": "sentence-transformers/all-MiniLM-L6-v2",
+        "type": "sentence_transformer",
+        "max_tokens": 500
+    },
+    {
+        "name": "MiniLM-L12",
+        "path": "sentence-transformers/paraphrase-MiniLM-L12-v2",
+        "type": "sentence_transformer",
+        "max_tokens": 512
+    },
+    {
+        "name": "MPNet",
+        "path": "sentence-transformers/all-mpnet-base-v2",
+        "type": "sentence_transformer",
+        "max_tokens": 512
+    },
+    {
+        "name": "MiniLM-QA",
+        "path": "sentence-transformers/multi-qa-MiniLM-L6-cos-v1",
+        "type": "sentence_transformer",
+        "max_tokens": 512
+    },
+    {
+        "name": "T5-Base",
+        "path": "sentence-transformers/sentence-t5-base",
+        "type": "sentence_transformer",
+        "max_tokens": 512
+    },
+    {
+        "name": "BGE-Small",
+        "path": "BAAI/bge-small-en-v1.5",
+        "type": "sentence_transformer",
+        "max_tokens": 512,
+        "prompt": "Represent this sentence for retrieval: "
+    },
+    {
+        "name": "Qwen3",
+        "path": "Qwen/Qwen3-Embedding-0.6B",
+        "type": "qwen3",
+        "max_tokens": 8192,
+        "prompt_name": "query"
+    }
+]
