@@ -114,7 +114,7 @@ def main():
         "load_time_sec": pd.Series(dtype="float"),
         "embed_time_sec": pd.Series(dtype="float"),
         "avg_cos_sim": pd.Series(dtype="float"),
-        "silhouette": pd.Series(dtype="object"),  # Allow float or "N/A"
+        "silhouette": pd.Series(dtype="float"),  # Allow float or "N/A"
     })
     all_rows_data = []
     for config in embedding_model_configs:
@@ -130,7 +130,7 @@ def main():
                 "load_time_sec": round(load_time, 2),
                 "embed_time_sec": round(embed_time, 2),
                 "avg_cos_sim": round(avg_sim, 4),
-                "silhouette": round(sil_score, 4) if sil_score else "N/A",
+                "silhouette": round(sil_score, 4) if sil_score else 0,
             }
             all_rows_data.append(row)
         except Exception as e:
